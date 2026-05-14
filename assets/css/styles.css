@@ -110,6 +110,11 @@ margin-inline: auto;
 padding-inline: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .btn {
   display: inline-block;
@@ -128,6 +133,10 @@ padding-inline: 1.5rem;
 .btn:hover {
   background-color: var(--first-color-dark);
   outline-color: var(--first-color-dark);
+}
+
+.section {
+  padding-block: 7.5rem;
 }
 
 
@@ -172,6 +181,120 @@ padding-inline: 1.5rem;
 }
 
 /*=============== HOME ===============*/
+.home {
+  background-image: url(../img/home-bg.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+
+.home,
+.home-container,
+.home-content {
+  position: relative;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    at center right, 
+    hsla(var(--hue), 53%, 59%, 0) 0%, 
+    hsl(var(--hue), 0%, 0%)100%
+  );
+}
+
+.home-container {
+  padding-block: 8rem 2rem;
+  row-gap: 7.5rem;
+}
+
+.home-title {
+  font-size: var(--big-font-size);
+}
+
+.home-title img {
+  display: inline-block;
+}
+
+.home-title,
+.home-desc {
+  max-width: 700px;
+}
+
+.home-desc {
+  margin-block: 1.5rem 2rem;
+}
+
+.home-scroll {
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: flex-end;
+  column-gap: 0.5rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  transition: color 0.3s ease;
+}
+
+.home-scroll:hover {
+  color: var(--first-color);
+}
+
+.home-data {
+  position: absolute;
+  bottom: 0;
+  right: 1.5rem;
+  row-gap: 2rem;
+}
+
+.home-item{
+  text-align: right;
+}
+
+.home-no {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.home-subtitle {
+  font-size: var(--smaller-font-size);
+}
+
+.home-carousel {
+  max-width: 650px;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+  
+}
+
+.carousel-card {
+  width: 320px;
+  border: 2px solid var(--first-color);
+  margin-inline: 0.5rem;
+}
 
 /*=============== ABOUT ===============*/
 

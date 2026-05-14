@@ -63,8 +63,61 @@
     </header>
 
     <!--=============== MAIN ===============-->
+    <main class="main">
 
-    <!--=============== HOME ===============-->
+    <!--=============== HOME   ===============-->
+    <section class="home section">
+      <div class="home-container container grid">
+        <div class="home-content">
+            <h1 class="home-title">
+              Build P <img src="assets/img/shape.png" alt="" /> wer, Gain Confidence
+            </h1>
+
+            <p class="home-desc">
+              join our premium fitness center with expert trainers, modern equipment, and personalized programs designed to health and strength goals.
+            </p>
+
+            <a href="#" class="btn">Get Free Trial</a>
+
+            <a href="#about" class="home-scroll">
+              Scroll Down <i class="ri-arrow-down-line"></i>
+            </a>
+        </div>
+
+        <ul class="home-data grid">
+          <li class="home-item">
+            <h3 class="home-no">98+</h3>
+            <span class="home-subtitle">Health programs</span>
+          </li>
+
+          <li class="home-item">
+            <h3 class="home-no">40K+</h3>
+            <span class="home-subtitle">Active members</span>
+          </li>
+
+          <li class="home-item">
+            <h3 class="home-no">200+</h3>
+            <span class="home-subtitle">Expert Trainers</span>
+          </li>
+        </ul>
+
+        <div class="home-carousel">
+          <div class="carousel-content">
+            <article class="carousel-card">
+              <img src="assets/img/slide-1.jpg" alt="" class="carousel-img" />
+            </article>
+            
+            <article class="carousel-card">
+              <img src="assets/img/slide-2.jpg" alt="" class="carousel-img" />
+            </article>
+            
+            <article class="carousel-card">
+              <img src="assets/img/slide-3.jpg" alt="" class="carousel-img" />
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--=============== ABOUT ===============-->
 
@@ -82,9 +135,21 @@
 
     <!--=============== FOOTER ===============-->
 
+    </main>
+
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
-    <script></script>
+    <script>
+      const tracks = document.querySelectorAll('.carousel-content');
+
+      tracks.forEach((track) => {
+        const cards = [...track.children];
+
+        for(const card of cards) {
+          track.appendChild(card.cloneNode(true));
+        }
+      })
+    </script>
   </body>
 </html>
