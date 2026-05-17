@@ -416,6 +416,68 @@ padding-inline: 1.5rem;
 }
 
 /*=============== CLASS ===============*/
+.class {
+  background-color: var(--container-color);
+}
+
+.class-header {
+  grid-template-columns: 7fr 5fr;
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.class-main-title {
+  margin: 0;
+}
+
+.class-header .btn {
+  justify-self: end;
+}
+
+.class-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.class-item {
+  position: relative;
+  height: 600px;
+}
+
+.class-img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.class-item:hover .class-img {
+  opacity: 0.4;
+}
+
+.class-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  text-align: center;
+}
+
+.class-title {
+  font-size: var(--h3-font-size);
+}
+
+.class-desc {
+  max-width: 450px;
+  margin-block: 0.5rem 1.5rem;
+}
+
+.class-btn {
+  --hsla: hsla(var(--hue), 0%, 100%, 0.15);
+  background-color: var(--hsla);
+  outline-color: var(--hsla);
+}
 
 /*=============== PRICING ===============*/
 
