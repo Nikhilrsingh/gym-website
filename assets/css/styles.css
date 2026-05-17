@@ -678,7 +678,6 @@ padding-inline: 1.5rem;
 
 .member-name {
   font-size: var(--largest-font-size);
-  margin-bottom: 0.25rem;
 }
 
 .member-rating i {
@@ -686,6 +685,71 @@ padding-inline: 1.5rem;
 }
 
 /*=============== TRAINERS ===============*/
+.trainer {
+  max-width: 100%;
+  background-color: var(--container-color);
+}
+
+.trainer-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.trainer-item {
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  transition: border 0.3s ease;
+}
+
+.trainer-item:hover {
+  border-color: var(--first-color);
+}
+
+.trainer-img-wrapper {
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.trainer-img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.trainer-item:hover .trainer-img {
+  transform: scale(1.1);
+}
+
+.trainer-data {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.trainer-name {
+  font-size: var(--largest-font-size);
+}
+
+.trainer-social {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.trainer-social-link {
+  border: 1px solid var(--border-color);
+  width: 32px;
+  aspect-ratio: 1/1;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+}
+
+.trainer-social-link:hover {
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+}
 
 /*=============== CONTACT ===============*/
 
