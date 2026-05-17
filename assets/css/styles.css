@@ -579,6 +579,111 @@ padding-inline: 1.5rem;
 }
 
 /*=============== REVIEWS ===============*/
+.review-container {
+  grid-template-columns: 4.5fr 7.5fr;
+  column-gap: 7.5rem;
+}
+
+.review-desc {
+  margin-bottom: 1.5rem;
+}
+
+.review-div,
+.members-img {
+  display: flex;
+}
+
+.review-div {
+  align-items: center;
+}
+
+.member-img {
+  width: 48px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 3px solid var(--body-color);
+}
+
+.member-img:not(:first-child) {
+  margin-left: -1rem;
+}
+
+.review-div i {
+  color: var(--first-color);
+  margin-inline: 0.75rem 0.25rem;
+}
+
+.review-count {
+  color: var(--title-color);
+}
+
+.review-btn {
+  margin-top: auto;
+  justify-self: start;
+  margin-bottom: 0.25rem;
+}
+
+.review-card {
+  display: grid;
+  grid-template-columns: 4.2fr 7.8fr;
+}
+
+.review-left {
+  position: relative;
+}
+
+.review-img {
+  height: 260px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.review-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--title-color);
+  width: 56px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.review-link:hover {
+  color: var(--first-color);
+  border-color: var(--first-color);
+}
+
+.review-data {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+}
+
+.review-detail {
+  color: var(--title-color);
+  font-size: var(--large-font-size);
+}
+
+.member-detail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.member-name {
+  font-size: var(--largest-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.member-rating i {
+  color: var(--first-color);
+}
 
 /*=============== TRAINERS ===============*/
 
