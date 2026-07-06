@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://nikhilrsingh.github.io/gym-website/sitemap.xml
